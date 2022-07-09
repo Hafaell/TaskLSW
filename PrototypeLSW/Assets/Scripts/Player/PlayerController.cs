@@ -1,6 +1,7 @@
 using MyInput;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Player
@@ -10,7 +11,10 @@ namespace Player
         [SerializeField] private MyInputs myInputs;
         [SerializeField] private float speed;
         [SerializeField] private float radiusInteract;
+        [SerializeField] private LayerMask interactableLayer;
         private Vector2 movement;
+
+        private Iinteractable interactable;
 
         private Rigidbody2D rig;
 
@@ -36,7 +40,10 @@ namespace Player
 
             if (myInputs.input.Player.Interact.triggered)
             {
+                if (interactable == null)
+                    return;
 
+                interactable.Interact();
             }
         }
 
@@ -47,7 +54,21 @@ namespace Player
 
         private void CheckInteracts()
         {
-            Collider2D colliders = Physics2D.OverlapCircle(transform.position, radiusInteract);
+            Collider2D colliders = Physics2D.OverlapCircle(transform.position, radiusInteract, interactableLayer);
+
+            if (colliders == null)
+            {
+                if (interactable == null)
+                    return;
+
+                interactable.ShowIcon(false);
+                interactable = null;
+
+                return;
+            }
+
+            interactable = colliders.GetComponent<Iinteractable>();
+            interactable.ShowIcon(true);
         }
 
         private void OnDrawGizmos()
