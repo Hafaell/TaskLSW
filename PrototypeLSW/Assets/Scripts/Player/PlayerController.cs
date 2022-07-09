@@ -9,8 +9,9 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private MyInputs myInputs;
+        [SerializeField] private InventorySO playerInventory;
         [SerializeField] private float speed;
-        [SerializeField] private float radiusInteract;
+        [SerializeField] private float radiusInteractable;
         [SerializeField] private LayerMask interactableLayer;
         private Vector2 movement;
 
@@ -54,7 +55,7 @@ namespace Player
 
         private void CheckInteracts()
         {
-            Collider2D colliders = Physics2D.OverlapCircle(transform.position, radiusInteract, interactableLayer);
+            Collider2D colliders = Physics2D.OverlapCircle(transform.position, radiusInteractable, interactableLayer);
 
             if (colliders == null)
             {
@@ -71,10 +72,21 @@ namespace Player
             interactable.ShowIcon(true);
         }
 
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            LayerMask layer = collision.gameObject.layer;
+
+            if(layer == LayerMask.NameToLayer("Coin"))
+            {
+                playerInventory.SetGold(1);
+                Destroy(collision.gameObject);
+            }
+        }
+
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, radiusInteract);
+            Gizmos.DrawWireSphere(transform.position, radiusInteractable);
         }
     }
 }

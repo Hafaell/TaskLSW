@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CoinMachine : MonoBehaviour, Iinteractable
 {
+    [SerializeField] private Vector2 randomCoinAmount;
+    [SerializeField] private Coin coin;
     [SerializeField] private GameObject icon;
     private bool showIcon;
 
@@ -14,7 +16,12 @@ public class CoinMachine : MonoBehaviour, Iinteractable
 
     public void Interact()
     {
-        print("drop Money");
+        float randomAmount = Random.Range(randomCoinAmount.x, randomCoinAmount.y);
+
+        for (int i = 0; i < randomAmount; i++)
+        {
+            Instantiate(coin, transform.position, Quaternion.identity);
+        }
     }
 
     public void ShowIcon(bool value)

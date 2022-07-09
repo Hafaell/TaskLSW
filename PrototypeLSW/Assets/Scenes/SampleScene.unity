@@ -342,8 +342,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myInputs: {fileID: 816903753}
+  playerInventory: {fileID: 11400000, guid: 07a2a6bf4b3d7c944a381b6481007119, type: 2}
   speed: 8
-  radiusInteract: 2
+  radiusInteractable: 2
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -472,6 +473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e979ba25330190e4ea635ce60957057a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomCoinAmount: {x: 1, y: 3}
+  coin: {fileID: 8312637284714543949, guid: 5da386735b34fd84db3e601291313e03, type: 3}
   icon: {fileID: 1052984126}
 --- !u!61 &1460347586
 BoxCollider2D:
