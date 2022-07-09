@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace Interactables
 {
-    public class CoinMachine : MonoBehaviour, Iinteractable
+    public class Merchant : MonoBehaviour, Iinteractable
     {
-        [SerializeField] private Vector2 randomCoinAmount;
-        [SerializeField] private Coin coin;
+        [SerializeField] private GameObject dialogContent;
         [SerializeField] private GameObject icon;
         private bool showIcon;
 
@@ -18,12 +17,7 @@ namespace Interactables
 
         public void Interact()
         {
-            float randomAmount = Random.Range(randomCoinAmount.x, randomCoinAmount.y);
-
-            for (int i = 0; i < randomAmount; i++)
-            {
-                Instantiate(coin, transform.position, Quaternion.identity);
-            }
+            dialogContent.SetActive(true);
         }
 
         public void ShowIcon(bool value)

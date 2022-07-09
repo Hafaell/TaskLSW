@@ -78,7 +78,7 @@ namespace Player
 
             if(layer == LayerMask.NameToLayer("Coin"))
             {
-                playerInventory.SetGold(1);
+                playerInventory.gold++;
                 Destroy(collision.gameObject);
             }
         }

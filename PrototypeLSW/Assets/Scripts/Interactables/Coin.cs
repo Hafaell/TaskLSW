@@ -2,25 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+namespace Interactables
 {
-    [SerializeField] private CircleCollider2D circleColl;
-    [SerializeField] private float force;
-    private Rigidbody2D rig;
-
-    private void Awake()
+    public class Coin : MonoBehaviour
     {
-        rig = GetComponent<Rigidbody2D>();
-        Quaternion randomRotate = Quaternion.Euler(0, 0, Random.Range(0, 360));
+        [SerializeField] private CircleCollider2D circleColl;
+        [SerializeField] private float force;
+        private Rigidbody2D rig;
 
-        transform.rotation = randomRotate;
-    }
+        private void Awake()
+        {
+            rig = GetComponent<Rigidbody2D>();
+            Quaternion randomRotate = Quaternion.Euler(0, 0, Random.Range(0, 360));
 
-    private IEnumerator Start()
-    {
-        rig.AddForce(transform.right * force, ForceMode2D.Impulse);
+            transform.rotation = randomRotate;
+        }
 
-        yield return new WaitForSeconds(1f);
-        circleColl.enabled = true;
+        private IEnumerator Start()
+        {
+            rig.AddForce(transform.right * force, ForceMode2D.Impulse);
+
+            yield return new WaitForSeconds(1f);
+            circleColl.enabled = true;
+        }
     }
 }
