@@ -25,13 +25,32 @@ namespace Shopping
 
         public void SetupShop()
         {
-            if (gridItemsToBuy.childCount <= 0)
+            List<ItemSO> shopItems = new List<ItemSO>();
+
+            for (int i = 0; i < gridItemsToBuy.childCount; i++)
             {
-                InstantiateAmount(MerchantInventory.items);
-                return;
+                shopItems.Add(gridItemsToBuy.GetChild(i).GetComponent<Item>().itemType);
             }
 
-            InstantiateAmount(ItemsToRefresh());
+            List<ItemSO> itensToRefresh = MerchantInventory.items.Where(i => !shopItems.Contains(i)).ToList();
+            List<ItemSO> itemsToRemove = shopItems.Where(i => !MerchantInventory.items.Contains(i)).ToList();
+
+            if (itemsToRemove.Count > 0)
+                RemoveItemFromShop(itemsToRemove);
+
+            if (itensToRefresh.Count > 0)
+                InstantiateAmount(itensToRefresh);
+        }
+
+        private void RemoveItemFromShop(List<ItemSO> listItemsToRemove)
+        {
+            for (int i = 0; i < gridItemsToBuy.childCount; i++)
+            {
+                bool canRemove = listItemsToRemove.Any(obj => obj == gridItemsToBuy.GetChild(i).GetComponent<Item>().itemType);
+
+                if (canRemove)
+                    Destroy(gridItemsToBuy.GetChild(i).gameObject);
+            }
         }
 
         private void InstantiateAmount(List<ItemSO> listItemsToSpawn)
@@ -41,39 +60,6 @@ namespace Shopping
                 Item obj = Instantiate(itemPrefab, gridItemsToBuy);
                 obj.itemType = item;
             }
-        }
-
-        private List<ItemSO> ItemsToRefresh()
-        {
-            List<ItemSO> itemsToRefresh = new List<ItemSO>();
-
-            foreach (var item in MerchantInventory.items)
-            {
-                if (NeedRefrash(item))
-                {
-                    itemsToRefresh.Add(item);
-                }
-            }
-
-            return itemsToRefresh;
-        }
-
-        private bool NeedRefrash(ItemSO item)
-        {
-            bool needRefrash = true;
-
-            for (int i = 0; i < gridItemsToBuy.childCount; i++)
-            {
-                Item shopItem = gridItemsToBuy.GetChild(i).GetComponent<Item>();
-
-                if (item == shopItem.itemType)
-                {
-                    needRefrash = false;
-                    return needRefrash;
-                }
-            }
-
-            return needRefrash;
         }
     }
 }
