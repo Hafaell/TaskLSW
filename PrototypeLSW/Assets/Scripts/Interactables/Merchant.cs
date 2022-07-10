@@ -32,18 +32,13 @@ namespace Interactables
             }
         }
 
-        public void Interact()
+        public void EnterShop()
         {
             canvasContent.SetActive(true);
             anim.SetTrigger("start");
 
             dialog.StartDialog();
             inputs.EnableHUDControl();
-        }
-
-        public void ShowIcon(bool value)
-        {
-            icon.SetActive(value);
         }
 
         public void ExitShop()
@@ -53,6 +48,16 @@ namespace Interactables
             shopContent.SetActive(false);
 
             inputs.EnablePlayerControl();
+        }
+
+        public void Interact()
+        {
+            EnterShop();
+        }
+
+        public void ShowIcon(bool value)
+        {
+            icon.SetActive(value);
         }
     }
 }
