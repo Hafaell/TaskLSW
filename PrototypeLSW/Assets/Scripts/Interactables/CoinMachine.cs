@@ -9,12 +9,6 @@ namespace Interactables
         [SerializeField] private Vector2 randomCoinAmount;
         [SerializeField] private Coin coin;
         [SerializeField] private GameObject icon;
-        private bool showIcon;
-
-        private void Update()
-        {
-            icon.SetActive(showIcon);
-        }
 
         public void Interact()
         {
@@ -28,7 +22,7 @@ namespace Interactables
 
         public void ShowIcon(bool value)
         {
-            showIcon = value;
+            icon.SetActive(value);
         }
     }
 }

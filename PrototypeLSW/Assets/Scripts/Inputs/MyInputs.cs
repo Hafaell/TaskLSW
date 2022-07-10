@@ -21,5 +21,17 @@ namespace MyInput
         {
             input.Player.Disable();
         }
+
+        public void EnableHUDControl()
+        {
+            input.Player.Disable();
+            input.HUD.Enable();
+        }
+
+        public void EnablePlayerControl()
+        {
+            input.HUD.Disable();
+            input.Player.Enable();
+        }
     }
 }

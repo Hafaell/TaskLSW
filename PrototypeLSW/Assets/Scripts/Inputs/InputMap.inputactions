@@ -92,6 +92,34 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "HUD",
+            "id": "33678c9e-0957-48b3-93eb-809c7fe835e4",
+            "actions": [
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "e5d360be-8880-4a96-beb4-b42db3a8f2a4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "83eebe60-ea3a-4af9-8067-502e6cc341e5",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -1,28 +1,58 @@
+using MyInput;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Managers;
 
 namespace Interactables
 {
     public class Merchant : MonoBehaviour, Iinteractable
     {
-        [SerializeField] private GameObject dialogContent;
+        [Header("Scripts Ref:")]
+        [SerializeField] private MyInputs inputs;
+        [SerializeField] private Dialog dialog;
+
+        [Header("UI:")]
+        [SerializeField] private GameObject canvasContent;
+        [SerializeField] private GameObject shopContent;
         [SerializeField] private GameObject icon;
-        private bool showIcon;
+
+        private Animator anim;
+
+        private void Start()
+        {
+            anim = GetComponent<Animator>();
+        }
 
         private void Update()
         {
-            icon.SetActive(showIcon);
+            if (inputs.input.HUD.Exit.triggered)
+            {
+                ExitShop();
+            }
         }
 
         public void Interact()
         {
-            dialogContent.SetActive(true);
+            canvasContent.SetActive(true);
+            anim.SetTrigger("start");
+
+            dialog.StartDialog();
+            inputs.EnableHUDControl();
         }
 
         public void ShowIcon(bool value)
         {
-            showIcon = value;
+            icon.SetActive(value);
+        }
+
+        public void ExitShop()
+        {
+            anim.SetTrigger("exit");
+            canvasContent.SetActive(false);
+            shopContent.SetActive(false);
+
+            inputs.EnablePlayerControl();
         }
     }
 }
