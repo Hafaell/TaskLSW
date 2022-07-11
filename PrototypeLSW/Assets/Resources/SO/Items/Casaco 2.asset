@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
-  m_Name: Pineapple
+  m_Name: Casaco 2
   m_EditorClassIdentifier: 
-  itemName: Pineapple
-  sprite: {fileID: 21300000, guid: 9aebd705574f9e642aef1e5f59b3e4d8, type: 3}
-  description: um abacaxi suculento
-  price: 300
-  resalePrice: 100
+  itemName: Casaco
+  sprite: {fileID: 21300000, guid: 6fac4e39926fd9c4ca2ba4416160a857, type: 3}
+  description: Um outro Casaco para aguentar o frio
+  price: 7
+  resalePrice: 3
+  bodyPartItem:
+    bodyPartName: Body
+    bodyPartSO: {fileID: 11400000, guid: be58a8d0e5eb6f845b4f8f4074a83f4b, type: 2}

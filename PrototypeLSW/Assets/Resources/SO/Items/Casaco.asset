@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
-  m_Name: Apple
+  m_Name: Casaco
   m_EditorClassIdentifier: 
-  itemName: Apple
-  sprite: {fileID: 21300000, guid: 65f0e363b74cf5845ab8c3fbc14f39ac, type: 3}
-  description: "Uma ma\xE7\xE3 suculenta"
-  price: 2.84
-  resalePrice: 1.2
+  itemName: Casaco
+  sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+  description: Um Casaco para aguentar o frio
+  price: 10
+  resalePrice: 5
+  bodyPartItem:
+    bodyPartName: Body
+    bodyPartSO: {fileID: 11400000, guid: a5951101dc8c0974bbce33b3189cf2fe, type: 2}

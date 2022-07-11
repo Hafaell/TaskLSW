@@ -10,4 +10,6 @@ public class ItemSO : ScriptableObject
     public string description;
     public int price;
     public int resalePrice;
+
+    public BodyPart bodyPartItem;
 }

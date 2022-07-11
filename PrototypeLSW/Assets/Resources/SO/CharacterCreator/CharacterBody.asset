@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
-  m_Name: Chinelo
+  m_Script: {fileID: 11500000, guid: 3288959fe3377f9478380c252b702bb6, type: 3}
+  m_Name: CharacterBody
   m_EditorClassIdentifier: 
-  itemName: Chinelo
-  sprite: {fileID: 21300000, guid: 3494dc956dfd7174abc07060940a2848, type: 3}
-  description: "um chinelo para nao andar descal\xE7o"
-  price: 5.4
-  resalePrice: 3
+  characterBodyParts:
+  - bodyPartName: Body
+    bodyPartSO: {fileID: 11400000, guid: a5951101dc8c0974bbce33b3189cf2fe, type: 2}

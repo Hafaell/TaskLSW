@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Managers;
 using Shop;
+using Player;
 
 namespace Interactables
 {
@@ -38,6 +39,8 @@ namespace Interactables
         {
             canvasContent.SetActive(true);
             anim.SetTrigger("start");
+
+            PlayerController.showInventory_ACT?.Invoke(false);
 
             dialog.StartDialog();
             inputs.EnableHUDControl();
