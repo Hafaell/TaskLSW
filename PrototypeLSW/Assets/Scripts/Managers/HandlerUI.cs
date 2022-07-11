@@ -12,7 +12,7 @@ namespace Managers
 
         private void Update()
         {
-            goldText.text = $"{playerInventory.gold}x";
+            goldText.text = $"{playerInventory.coins}x";
         }
     }
 }

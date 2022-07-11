@@ -303,19 +303,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4254545484089774383}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1121422707377860607}
-        m_TargetAssemblyTypeName: Shopping.Item, Assembly-CSharp
-        m_MethodName: DebugClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!222 &4061705125111448609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1024,6 +1012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: {fileID: 11400000, guid: e732437db149b4f49b0d65864a4256c6, type: 2}
   image: {fileID: 448895533558840101}
-  _name: {fileID: 4899644978545407838}
+  itemName: {fileID: 4899644978545407838}
   description: {fileID: 8904787584799303843}
   price: {fileID: 535828524407419942}
+  button: {fileID: 5887468202083564793}

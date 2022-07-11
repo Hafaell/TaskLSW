@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Managers;
+using Shop;
 
 namespace Interactables
 {
@@ -11,6 +12,7 @@ namespace Interactables
         [Header("Scripts Ref:")]
         [SerializeField] private MyInputs inputs;
         [SerializeField] private Dialog dialog;
+        [SerializeField] private Shopping shopping;
 
         [Header("UI:")]
         [SerializeField] private GameObject canvasContent;
@@ -46,6 +48,8 @@ namespace Interactables
             anim.SetTrigger("exit");
             canvasContent.SetActive(false);
             shopContent.SetActive(false);
+
+            shopping.DeselectItem();
 
             inputs.EnablePlayerControl();
         }

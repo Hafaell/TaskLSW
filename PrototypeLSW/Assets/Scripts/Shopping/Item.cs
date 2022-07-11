@@ -4,16 +4,17 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Shopping
+namespace Shop
 {
     public class Item : MonoBehaviour
     {
         public ItemSO itemType;
 
         public Image image;
-        public TextMeshProUGUI _name;
+        public TextMeshProUGUI itemName;
         public TextMeshProUGUI description;
         public TextMeshProUGUI price;
+        public Button button;
 
         private void Start()
         {
@@ -23,14 +24,13 @@ namespace Shopping
         private void SetupItem()
         {
             image.sprite = itemType.sprite;
-            _name.text = itemType._name;
+            itemName.text = itemType.itemName;
             description.text = itemType.description;
-            price.text = $"${itemType.price}";
         }
 
-        public void DebugClick()
+        public void ChangePrice(float _price)
         {
-            print(itemType._name);
+            price.text = $"${_price}";
         }
     }
 }

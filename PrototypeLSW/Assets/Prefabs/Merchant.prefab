@@ -36,10 +36,10 @@ RectTransform:
   m_Father: {fileID: 303134204082146149}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 266.39496, y: -99.485}
+  m_SizeDelta: {x: 495.4, y: 127.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3966016922625610501
 CanvasRenderer:
@@ -137,20 +137,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2876515732012266251}
         m_TargetAssemblyTypeName: Shopping.Shopping, Assembly-CSharp
-        m_MethodName: SetupShop
+        m_MethodName: SetupShopBuy
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1322795874461480746}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -255,7 +243,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1584335324931217243}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2876515732012266251
 MonoBehaviour:
@@ -269,10 +257,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c678626c302fcd47902339a914a7856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerInventory: {fileID: 11400000, guid: 07a2a6bf4b3d7c944a381b6481007119, type: 2}
-  MerchantInventory: {fileID: 11400000, guid: 8f4b2e7aee152064f85d8cac728d7487, type: 2}
+  playerInventory: {fileID: 11400000, guid: 07a2a6bf4b3d7c944a381b6481007119, type: 2}
+  merchantInventory: {fileID: 11400000, guid: 8f4b2e7aee152064f85d8cac728d7487, type: 2}
   itemPrefab: {fileID: 1121422707377860607, guid: 58dec44989b44574597d330eff587eaf, type: 3}
-  gridItemsToBuy: {fileID: 6486774827007192000}
+  gridItems: {fileID: 6486774827007192000}
+  colorWhenSelected: {r: 0.40392157, g: 0.8745098, b: 0.57254905, a: 1}
+  colorBeforeSelected: {r: 0.93333334, g: 0.93333334, b: 0.93333334, a: 0.9019608}
 --- !u!1 &1584335322934250451
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +445,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1584335324931217243}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1584335323627693581
 SpriteRenderer:
@@ -686,8 +676,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1584335324809122850}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
+      - m_Target: {fileID: 7905547025089182581}
+        m_TargetAssemblyTypeName: Managers.Dialog, Assembly-CSharp
         m_MethodName: NextSentences
         m_Mode: 1
         m_Arguments:
@@ -747,7 +737,7 @@ RectTransform:
   - {fileID: 1584335323493881801}
   - {fileID: 1584335324094713321}
   m_Father: {fileID: 1584335324931217243}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1026,71 +1016,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &1584335324809122851
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1584335324809122849}
-  - component: {fileID: 1584335324809122850}
-  m_Layer: 0
-  m_Name: DialogManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1584335324809122849
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584335324809122851}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.68, y: 0.23, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1584335324931217243}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1584335324809122850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584335324809122851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274bd64d95fce4842ac2c32b0dbc45ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1584335324773866502}
-  typingSpeed: 0.05
-  sentences:
-  - "Ah que surpresa voc\xEA por aqui"
-  - "O dia est\xE1 lindo para fazer umas comprinhas em"
-  - O que acha de dar uma olhadinha na minha loja?
-  finishEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1584335324931217240}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ShowOptions
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1584335324931217237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,6 +1029,7 @@ GameObject:
   - component: {fileID: 1584335324931217236}
   - component: {fileID: 1584335324931217241}
   - component: {fileID: 1584335324931217242}
+  - component: {fileID: 7905547025089182581}
   m_Layer: 3
   m_Name: Merchant
   m_TagString: Untagged
@@ -1123,7 +1049,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1584335324809122849}
   - {fileID: 4259272682524068432}
   - {fileID: 1584335323627693582}
   - {fileID: 1584335324470598886}
@@ -1241,10 +1166,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputs: {fileID: 0}
-  dialog: {fileID: 1584335324809122850}
+  dialog: {fileID: 7905547025089182581}
+  shopping: {fileID: 2876515732012266251}
   canvasContent: {fileID: 1584335324470598887}
   shopContent: {fileID: 2937670902956035589}
   icon: {fileID: 1584335323627693583}
+--- !u!114 &7905547025089182581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584335324931217237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274bd64d95fce4842ac2c32b0dbc45ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDisplay: {fileID: 1584335324773866502}
+  typingSpeed: 0.05
+  sentences:
+  - "Ah que surpresa voc\xEA por aqui"
+  - "O dia est\xE1 lindo para fazer umas comprinhas em"
+  - O que acha de dar uma olhadinha na minha loja?
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1584335324931217240}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ShowOptions
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2937670902956035589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,17 +1542,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4169589543142375521}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2876515732012266251}
+        m_TargetAssemblyTypeName: Shop.Shopping, Assembly-CSharp
+        m_MethodName: DeselectItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2937670902956035589}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -2363,7 +2322,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2837046055771635560}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2876515732012266251}
+        m_TargetAssemblyTypeName: Shop.Shopping, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7249670464520468405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,10 +2371,10 @@ RectTransform:
   m_Father: {fileID: 303134204082146149}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 266.39496, y: -238.33499}
+  m_SizeDelta: {x: 495.4, y: 127.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2914840083082629816
 CanvasRenderer:
@@ -2486,7 +2457,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7481368250471450323}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2937670902956035589}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2876515732012266251}
+        m_TargetAssemblyTypeName: Shop.Shopping, Assembly-CSharp
+        m_MethodName: SetupShopSell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5180188876747725499
 MonoBehaviour:
   m_ObjectHideFlags: 0

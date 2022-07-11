@@ -6,5 +6,15 @@ using UnityEngine;
 public class InventorySO : ScriptableObject
 {
     public List<ItemSO> items;
-    public int gold;
+    public float coins;
+
+    public void AddItem(ItemSO item)
+    {
+        items.Add(item);
+    }
+
+    public void RemoveItem(ItemSO item)
+    {
+        items.Remove(item);
+    }
 }
