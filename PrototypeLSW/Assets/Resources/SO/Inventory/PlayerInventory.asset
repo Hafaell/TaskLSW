@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: 68dbbb9662d951d43a801bc6108da21c, type: 2}
   - {fileID: 11400000, guid: e732437db149b4f49b0d65864a4256c6, type: 2}
-  coins: 2.2800195
+  coins: 295
+  unlimitedCoin: 0

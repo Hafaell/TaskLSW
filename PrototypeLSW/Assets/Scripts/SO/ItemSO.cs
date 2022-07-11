@@ -8,6 +8,6 @@ public class ItemSO : ScriptableObject
     public string itemName;
     public Sprite sprite;
     public string description;
-    public float price;
-    public float resalePrice;
+    public int price;
+    public int resalePrice;
 }

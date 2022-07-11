@@ -9,18 +9,31 @@ namespace Shop
     public class Shopping : MonoBehaviour
     {
         [Header("Scripts Ref:")]
-        public InventorySO playerInventory;
-        public InventorySO merchantInventory;
-        public Item itemPrefab;
+        [SerializeField] private InventorySO playerInventory;
+        [SerializeField] private InventorySO merchantInventory;
+        [SerializeField] private Item itemPrefab;
 
         [Header("Shop Settings:")]
-        public Transform gridItems;
-        public Color colorWhenSelected;
-        public Color colorBeforeSelected;
+        [SerializeField] private Transform gridItems;
+        [SerializeField] private Button purchaseButton;
+        [SerializeField] private Button sellButton;
+
+        [SerializeField] private Color colorWhenSelected;
+        [SerializeField] private Color colorBeforeSelected;
 
         private Item itemSelect;
 
         public void Buy()
+        {
+            WhoPurchase(playerInventory, merchantInventory);
+        }
+
+        public void Sell()
+        {
+            WhoPurchase(merchantInventory, playerInventory);
+        }
+
+        private void WhoPurchase(InventorySO whoPurchase, InventorySO whoSell)
         {
             if (itemSelect == null)
             {
@@ -28,34 +41,36 @@ namespace Shop
                 return;
             }
 
-            if (playerInventory.coins < itemSelect.itemType.price)
+            if (!whoPurchase.unlimitedCoin)
             {
-                print("dinheiro insuficiente");
-                return;
+                if (whoPurchase.coins < itemSelect.itemType.price)
+                {
+                    print("dinheiro insuficiente");
+                    return;
+                }
             }
 
-            playerInventory.AddItem(itemSelect.itemType);
-            merchantInventory.RemoveItem(itemSelect.itemType);
+            whoPurchase.AddItem(itemSelect.itemType);
+            whoSell.RemoveItem(itemSelect.itemType);
 
-            playerInventory.coins -= itemSelect.itemType.price;
-            merchantInventory.coins += itemSelect.itemType.price;
+            whoPurchase.coins -= whoPurchase == playerInventory ? itemSelect.itemType.price : itemSelect.itemType.resalePrice;
+            whoSell.coins += whoPurchase == playerInventory ? itemSelect.itemType.price : itemSelect.itemType.resalePrice;
 
             itemSelect.button.interactable = false;
             DeselectItem();
         }
 
-        public void Sell()
-        {
-
-        }
-
         public void SetupShopBuy()
         {
+            purchaseButton.gameObject.SetActive(true);
+            sellButton.gameObject.SetActive(false);
             Setup(true);
         }
 
         public void SetupShopSell()
         {
+            sellButton.gameObject.SetActive(true);
+            purchaseButton.gameObject.SetActive(false);
             Setup(false);
         }
 
@@ -76,7 +91,7 @@ namespace Shop
             if (itemsToRefresh.Count > 0)
                 InstantiateAmount(itemsToRefresh);
 
-            ChangePrice(isBuy);
+            ChangePrice();
 
             void FillLists(InventorySO inventory)
             {
@@ -86,20 +101,20 @@ namespace Shop
                 itemsToRefresh = inventory.items.Where(i => !shopItems.Contains(i)).ToList();
                 itemsToRemove = shopItems.Where(i => !inventory.items.Contains(i)).ToList();
             }
-        }
 
-        private void ChangePrice(bool isBuy)
-        {
-            for (int i = 0; i < gridItems.childCount; i++)
+            void ChangePrice()
             {
-                ItemSO itemIndex = gridItems.GetChild(i).GetComponent<Item>().itemType;
+                for (int i = 0; i < gridItems.childCount; i++)
+                {
+                    ItemSO itemIndex = gridItems.GetChild(i).GetComponent<Item>().itemType;
 
-                gridItems.GetChild(i).GetComponent<Item>().button.interactable = true;
+                    gridItems.GetChild(i).GetComponent<Item>().button.interactable = true;
 
-                if (isBuy)
-                    gridItems.GetChild(i).GetComponent<Item>().ChangePrice(itemIndex.price);
-                else
-                    gridItems.GetChild(i).GetComponent<Item>().ChangePrice(itemIndex.resalePrice);
+                    if (isBuy)
+                        gridItems.GetChild(i).GetComponent<Item>().ChangePrice(itemIndex.price);
+                    else
+                        gridItems.GetChild(i).GetComponent<Item>().ChangePrice(itemIndex.resalePrice);
+                }
             }
         }
 

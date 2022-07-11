@@ -6,7 +6,8 @@ using UnityEngine;
 public class InventorySO : ScriptableObject
 {
     public List<ItemSO> items;
-    public float coins;
+    public int coins;
+    public bool unlimitedCoin;
 
     public void AddItem(ItemSO item)
     {
