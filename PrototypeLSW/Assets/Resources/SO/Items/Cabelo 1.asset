@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3288959fe3377f9478380c252b702bb6, type: 3}
-  m_Name: CharacterBody
+  m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
+  m_Name: Cabelo 1
   m_EditorClassIdentifier: 
-  characterBodyParts:
-  - bodyPartName: Body
-    bodyPartSO: {fileID: 11400000, guid: a5951101dc8c0974bbce33b3189cf2fe, type: 2}
-  - bodyPartName: Hair
+  itemName: Moecano
+  sprite: {fileID: -1204852222, guid: 040890832b92e5f488815378703a679f, type: 3}
+  description: um cabelo comum
+  price: 7
+  resalePrice: 5
+  bodyPartItem:
+    bodyPartName: Hair
     bodyPartSO: {fileID: 11400000, guid: eb98cf1fb5358264e8df39ede2eee162, type: 2}
-  - bodyPartName: Torso
-    bodyPartSO: {fileID: 11400000, guid: 3bc3b264d2ef52a4e90639e78b191a6c, type: 2}

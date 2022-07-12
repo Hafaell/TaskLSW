@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
-  m_Name: Casaco 2
+  m_Name: Corpo 0
   m_EditorClassIdentifier: 
-  itemName: Casaco
-  sprite: {fileID: 21300000, guid: 6fac4e39926fd9c4ca2ba4416160a857, type: 3}
-  description: Um outro Casaco para aguentar o frio
-  price: 7
-  resalePrice: 3
+  itemName: Corpo
+  sprite: {fileID: -392501396, guid: 0c4bb1c649739d14da8f81c24786894c, type: 3}
+  description: skin escura
+  price: 10
+  resalePrice: 5
   bodyPartItem:
     bodyPartName: Body
     bodyPartSO: {fileID: 11400000, guid: be58a8d0e5eb6f845b4f8f4074a83f4b, type: 2}

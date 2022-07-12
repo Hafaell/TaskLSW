@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab0bf603efb65543b035765cffd22ae, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
-  items: []
-  coins: 287
+  items:
+  - {fileID: 11400000, guid: e45dbe6b306b33141b6b3a33e7e74513, type: 2}
+  - {fileID: 11400000, guid: 2659465c9fd29af4dafbf2e5feee2a08, type: 2}
+  - {fileID: 11400000, guid: ce013fc45550d3746b49d31b05528ff9, type: 2}
+  - {fileID: 11400000, guid: eeb7d2d45e8396d4c9d8cf946e74749c, type: 2}
+  - {fileID: 11400000, guid: 8b4d40d6afb34d245bc7fcd30b4993a5, type: 2}
+  - {fileID: 11400000, guid: d7fb56dca5370c34bb685bf6c68cf843, type: 2}
+  coins: 242
   unlimitedCoin: 0
