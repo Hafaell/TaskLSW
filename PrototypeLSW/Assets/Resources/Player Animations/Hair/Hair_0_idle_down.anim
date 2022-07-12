@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Body_0_idle_righ
+  m_Name: Hair_0_idle_down
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 568264970, guid: 0c4bb1c649739d14da8f81c24786894c, type: 3}
+      value: {fileID: -469503183, guid: 040890832b92e5f488815378703a679f, type: 3}
     attribute: m_Sprite
-    path: Body
+    path: Hair
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -33,14 +33,14 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2073732236
+      path: 1019596327
       attribute: 0
       script: {fileID: 0}
       typeID: 212
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 568264970, guid: 0c4bb1c649739d14da8f81c24786894c, type: 3}
+    - {fileID: -469503183, guid: 040890832b92e5f488815378703a679f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
