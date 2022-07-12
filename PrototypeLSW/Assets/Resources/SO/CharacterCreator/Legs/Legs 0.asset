@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab0bf603efb65543b035765cffd22ae, type: 3}
-  m_Name: PlayerInventory
+  m_Script: {fileID: 11500000, guid: 6e72727ebb87c084a805f7c8c1cffe4c, type: 3}
+  m_Name: Legs 0
   m_EditorClassIdentifier: 
-  items: []
-  coins: 268
-  unlimitedCoin: 0
+  bodyPartName: Jeans Grey
+  bodyPartAnimationID: 0

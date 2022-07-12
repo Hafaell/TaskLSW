@@ -18,4 +18,6 @@ MonoBehaviour:
   - bodyPartName: Hair
     bodyPartSO: {fileID: 11400000, guid: eb98cf1fb5358264e8df39ede2eee162, type: 2}
   - bodyPartName: Torso
-    bodyPartSO: {fileID: 11400000, guid: 3bc3b264d2ef52a4e90639e78b191a6c, type: 2}
+    bodyPartSO: {fileID: 11400000, guid: 572d3a6f587eb644fb0128ebe485d80a, type: 2}
+  - bodyPartName: Legs
+    bodyPartSO: {fileID: 11400000, guid: cb377e30a9b8e21409441b44a327c525, type: 2}

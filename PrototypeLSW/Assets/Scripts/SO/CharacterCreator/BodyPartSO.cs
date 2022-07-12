@@ -7,6 +7,4 @@ public class BodyPartSO : ScriptableObject
 {
     public string bodyPartName;
     public int bodyPartAnimationID;
-
-    public List<AnimationClip> allBodyPartAnimations = new List<AnimationClip>();
 }

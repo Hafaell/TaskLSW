@@ -12,14 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e72727ebb87c084a805f7c8c1cffe4c, type: 3}
   m_Name: Hair 0
   m_EditorClassIdentifier: 
-  bodyPartName: Casual Swoop
-  bodyPartAnimationID: 1
-  allBodyPartAnimations:
-  - {fileID: 7400000, guid: e4e0fb7b2b0a57344b7722b05ef95556, type: 2}
-  - {fileID: 7400000, guid: c8e323699de1d24409c39f337b91b3f2, type: 2}
-  - {fileID: 7400000, guid: 1028a3a4262c0e2468c890564f2df475, type: 2}
-  - {fileID: 7400000, guid: 5c5c82e86bfff0749b1efee84de0adaf, type: 2}
-  - {fileID: 7400000, guid: 0420f2ad0199be94596e04b2ffe0786a, type: 2}
-  - {fileID: 7400000, guid: 6f6407b1cc2e0a146acc2da0beb00dd9, type: 2}
-  - {fileID: 7400000, guid: 992ff4e0d9302644ba410bd3e5526714, type: 2}
-  - {fileID: 7400000, guid: f0d314f05612edb4fa321a8476cea19b, type: 2}
+  bodyPartName: Mohawk
+  bodyPartAnimationID: 0
