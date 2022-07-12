@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab0bf603efb65543b035765cffd22ae, type: 3}
   m_Name: MerchantInventory
   m_EditorClassIdentifier: 
-  items: []
-  coins: 231
+  items:
+  - {fileID: 11400000, guid: eeb7d2d45e8396d4c9d8cf946e74749c, type: 2}
+  - {fileID: 11400000, guid: ce013fc45550d3746b49d31b05528ff9, type: 2}
+  coins: 238
   unlimitedCoin: 1

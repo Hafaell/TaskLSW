@@ -11,6 +11,7 @@ namespace Player
         [Header("Scripts Ref:")]
         [SerializeField] private InventorySO playerInventory;
         [SerializeField] private CharacterBodySO characterBody;
+        [SerializeField] private BodyPartsManager bodyPartsManager;
 
         [Header("Inventory Settings:")]
         [SerializeField] private Transform gridItems;
@@ -63,6 +64,7 @@ namespace Player
                 Item obj = Instantiate(itemPrefab, gridItems);
                 obj.itemType = item;
                 obj.button.onClick.AddListener(() => SelectItem(item));
+                obj.button.onClick.AddListener(() => bodyPartsManager.UpdateBodyParts());
             }
         }
 
