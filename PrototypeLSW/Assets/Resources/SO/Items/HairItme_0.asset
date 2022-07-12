@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
-  m_Name: Legs 0
+  m_Name: HairItme_0
   m_EditorClassIdentifier: 
-  itemName: jeans cinza
-  sprite: {fileID: 717071282, guid: 68fde958ece192e4386f449e4716ad92, type: 3}
-  description: um jeans
+  itemName: Mohican
+  sprite: {fileID: -1204852222, guid: 040890832b92e5f488815378703a679f, type: 3}
+  description: For some reason punks love it
   price: 7
-  resalePrice: 3
+  resalePrice: 5
   bodyPartItem:
-    bodyPartName: Legs
-    bodyPartSO: {fileID: 11400000, guid: 9f974d92d4a8ebf4f926a9060ed2aa55, type: 2}
+    bodyPartName: Hair
+    bodyPartSO: {fileID: 11400000, guid: eb98cf1fb5358264e8df39ede2eee162, type: 2}

@@ -10,6 +10,8 @@ namespace Shop
     {
         public ItemSO itemType;
 
+        public GameObject descriptionsContent;
+
         public Image image;
         public TextMeshProUGUI itemName;
         public TextMeshProUGUI description;
@@ -19,6 +21,11 @@ namespace Shop
         private void Start()
         {
             SetupItem();
+        }
+
+        private void Update()
+        {
+            descriptionsContent.SetActive(MouseOverUI.GetMouseOverUIElement() == gameObject);
         }
 
         private void SetupItem()

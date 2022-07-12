@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
-  m_Name: Cabelo 0
+  m_Name: LegsItem_0
   m_EditorClassIdentifier: 
-  itemName: Topete
-  sprite: {fileID: 481647588, guid: 040890832b92e5f488815378703a679f, type: 3}
-  description: "Um topet\xE3o"
-  price: 3
-  resalePrice: 1
+  itemName: Grey Jeans
+  sprite: {fileID: 717071282, guid: 68fde958ece192e4386f449e4716ad92, type: 3}
+  description: A stylish pants I would say
+  price: 10
+  resalePrice: 6
   bodyPartItem:
-    bodyPartName: Hair
-    bodyPartSO: {fileID: 11400000, guid: f9d5eb803cf255045b2f872ba3b7d6de, type: 2}
+    bodyPartName: Legs
+    bodyPartSO: {fileID: 11400000, guid: 9f974d92d4a8ebf4f926a9060ed2aa55, type: 2}

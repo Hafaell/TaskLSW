@@ -10,9 +10,13 @@ namespace Managers
         [SerializeField] private InventorySO playerInventory;
         [SerializeField] private TextMeshProUGUI goldText;
 
+        [SerializeField] private GameObject inventoryPlayerUI;
+        [SerializeField] private GameObject tabUI;
+
         private void Update()
         {
             goldText.text = $"{playerInventory.coins}x";
+            tabUI.SetActive(!inventoryPlayerUI.activeInHierarchy);
         }
     }
 }

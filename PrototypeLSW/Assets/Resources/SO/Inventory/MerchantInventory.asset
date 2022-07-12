@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: MerchantInventory
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: eeb7d2d45e8396d4c9d8cf946e74749c, type: 2}
   - {fileID: 11400000, guid: ce013fc45550d3746b49d31b05528ff9, type: 2}
+  - {fileID: 11400000, guid: eeb7d2d45e8396d4c9d8cf946e74749c, type: 2}
   - {fileID: 11400000, guid: e45dbe6b306b33141b6b3a33e7e74513, type: 2}
   - {fileID: 11400000, guid: 2659465c9fd29af4dafbf2e5feee2a08, type: 2}
-  coins: 256
+  - {fileID: 11400000, guid: 4fa2b6d2d1a57144dac9138c85ffc199, type: 2}
+  - {fileID: 11400000, guid: 62e6c9735f72ecf42907034adf13326e, type: 2}
+  - {fileID: 11400000, guid: 8b4d40d6afb34d245bc7fcd30b4993a5, type: 2}
+  - {fileID: 11400000, guid: d7fb56dca5370c34bb685bf6c68cf843, type: 2}
+  coins: 0
   unlimitedCoin: 1

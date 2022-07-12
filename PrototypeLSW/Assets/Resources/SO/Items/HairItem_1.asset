@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
-  m_Name: Corpo 0
+  m_Name: HairItem_1
   m_EditorClassIdentifier: 
-  itemName: Corpo
-  sprite: {fileID: -392501396, guid: 0c4bb1c649739d14da8f81c24786894c, type: 3}
-  description: skin escura
-  price: 10
-  resalePrice: 5
+  itemName: Standard Hair
+  sprite: {fileID: 481647588, guid: 040890832b92e5f488815378703a679f, type: 3}
+  description: A standard haircut
+  price: 5
+  resalePrice: 3
   bodyPartItem:
-    bodyPartName: Body
-    bodyPartSO: {fileID: 11400000, guid: be58a8d0e5eb6f845b4f8f4074a83f4b, type: 2}
+    bodyPartName: Hair
+    bodyPartSO: {fileID: 11400000, guid: f9d5eb803cf255045b2f872ba3b7d6de, type: 2}

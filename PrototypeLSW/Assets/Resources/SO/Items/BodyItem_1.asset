@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
-  m_Name: Torso 0
+  m_Name: BodyItem_1
   m_EditorClassIdentifier: 
-  itemName: Casaco
-  sprite: {fileID: 835036454, guid: d2704d2ad154bcd47a3c7e2d4d59d8eb, type: 3}
-  description: Um outro Casaco para aguentar o frio
-  price: 7
-  resalePrice: 3
+  itemName: White Skin
+  sprite: {fileID: 44230302, guid: 0c4bb1c649739d14da8f81c24786894c, type: 3}
+  description: Change your skin color to white
+  price: 3
+  resalePrice: 2
   bodyPartItem:
-    bodyPartName: Torso
-    bodyPartSO: {fileID: 11400000, guid: 3bc3b264d2ef52a4e90639e78b191a6c, type: 2}
+    bodyPartName: Body
+    bodyPartSO: {fileID: 11400000, guid: a5951101dc8c0974bbce33b3189cf2fe, type: 2}

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a77f43193f3534190e0e27ee7976ae, type: 3}
-  m_Name: Cabelo 1
+  m_Name: BodyItem_0
   m_EditorClassIdentifier: 
-  itemName: Moecano
-  sprite: {fileID: -1204852222, guid: 040890832b92e5f488815378703a679f, type: 3}
-  description: um cabelo comum
-  price: 7
-  resalePrice: 5
+  itemName: Black Skin
+  sprite: {fileID: -392501396, guid: 0c4bb1c649739d14da8f81c24786894c, type: 3}
+  description: Change your skin color to black
+  price: 3
+  resalePrice: 2
   bodyPartItem:
-    bodyPartName: Hair
-    bodyPartSO: {fileID: 11400000, guid: eb98cf1fb5358264e8df39ede2eee162, type: 2}
+    bodyPartName: Body
+    bodyPartSO: {fileID: 11400000, guid: be58a8d0e5eb6f845b4f8f4074a83f4b, type: 2}
