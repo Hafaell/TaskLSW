@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
   items: []
-  coins: 186
+  coins: 0
   unlimitedCoin: 0

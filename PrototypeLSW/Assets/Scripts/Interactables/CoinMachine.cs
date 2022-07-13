@@ -9,6 +9,12 @@ namespace Interactables
         [SerializeField] private Vector2 randomCoinAmount;
         [SerializeField] private Coin coin;
         [SerializeField] private GameObject icon;
+        [SerializeField] private Animator anim;
+
+        private void Start()
+        {
+            anim = GetComponent<Animator>();
+        }
 
         public void Interact()
         {
@@ -18,6 +24,8 @@ namespace Interactables
             {
                 Instantiate(coin, transform.position, Quaternion.identity);
             }
+
+            anim.SetTrigger("drop");
         }
 
         public void ShowIcon(bool value)

@@ -13,7 +13,7 @@ namespace Interactables
         private void Awake()
         {
             rig = GetComponent<Rigidbody2D>();
-            Quaternion randomRotate = Quaternion.Euler(0, 0, Random.Range(0, 360));
+            Quaternion randomRotate = Quaternion.Euler(0, 0, Random.Range(180, 0));
 
             transform.rotation = randomRotate;
         }
